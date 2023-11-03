@@ -46,7 +46,7 @@ class NewEnrollment {
             // const mca = await CourseModel.find({course : 'Bachelors of Computer & Applications (BCA)'})
             // console.log(req.params.id)
             // res.render('Coursedisplay', { d: data, n: name, profile: image , bt : btech , mca: mca , bca : bca  })
-            res.render('Coursedisplay', { d: data, n: name, profile: image  })
+            res.render('coursedisplay', { d: data, n: name, profile: image  })
         } catch (error) {
             console.log(error)
         }
