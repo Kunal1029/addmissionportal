@@ -126,8 +126,11 @@ video {
     background-attachment: fixed;
 }
 .whyitm h1{
-    font-size: 4em;
+    font-size: 3em;
     letter-spacing: 2px;
+    /* border-bottom: rgb(238, 149, 39) solid 2px; */
+    /* display: inline; */
+    text-decoration: underline solid 2px red;
 }
 .whyitm p{
     font-size: 2.5rem;
@@ -173,13 +176,14 @@ label {
 }
 
 .h22 {
-    font-size: 4vw;
+    font-size: 3rem;
     font-weight: 400;
     font-weight:500;
     letter-spacing: 2px;
-    color: #bcffca;
-    border-bottom: rgb(238, 149, 39) solid 2px;
-    display: inline;
+    /* color: #bcffca; */
+    color: #fff;
+    text-decoration: underline solid 2px  red;
+
 }
 
 /* .h22::before {
@@ -309,8 +313,10 @@ label {
 
 .kk h1 {
     letter-spacing: 1px;
-    font-size: 3.5rem;
+    font-size: 3rem;
     /* font-weight: lighter; */
+    text-decoration: underline solid 2px red;
+
 }
 
 .kk h5 {
@@ -371,10 +377,11 @@ label {
    color: white;
    font-weight: lighter;
    letter-spacing: 1px;
-   font-size: 5rem;
+   font-size: 3rem;
    margin-left: 6%;
    margin-bottom: 2%;
-  
+   text-decoration: underline solid 2px rgb(238, 149, 39);
+
 }
 .j{
     position: relative;
@@ -643,7 +650,7 @@ footer{
         font-size: 0.9rem;
     }
     .stulife h1{
-        font-size: 2rem;
+        font-size: 3rem;
         margin-left: 0%;
         margin-bottom: 0%;
     }
