@@ -5,6 +5,7 @@ class AdminController{
         try{
             const {name , image } = req.data1;
             const data = await CourseModel.find()
+            const n1 = name.charAt(0).toUpperCase();
             res.render('admin/getalldata',{n : name , profile : image , d: data})
         }
         catch(error){

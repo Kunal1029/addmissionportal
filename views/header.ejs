@@ -40,7 +40,7 @@
 
                 <div class="navbar-collapse collapse" id="mob_bar">
                     <ul class="nav navbar-nav ms-auto">
-                        <li class="ms-1"><a href="#home" class="nav-link">home</a></li>
+                        <li class="ms-1"><a href="/dashboard" class="nav-link">home</a></li>
                         <li class="ms-1"><a href="#whyus" class="nav-link">Why ITM</a></li>
                         <li class="ms-1"><a href="#allcourse" id="#course" class="nav-link">Courses</a></li>
                         <li class="ms-1"><a href="#ourstudent" class="nav-link">Our Gallery</a></li>
@@ -49,14 +49,14 @@
                         <li class="ms-1"><a href="#contactITM" class="nav-link">contact us</a></li>
                         <!-- <li class="ms-1"><%= n %></li>
                         <li class="ms-1 ss  rounded"></li> -->
-                        <li class="nav-item dropdown ms-1 ss  rounded bg-warning ">
+                        <!-- <li class="nav-item dropdown ms-1 ss  rounded bg-warning ">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Hello <%= n %>
+                                Hey <%= n1 %>
                             </a>
 
                             <ul class="dropdown-menu">
                               <li> 
-                                <!-- User profile (edit profile and forget password ) -->
+                                 User profile (edit profile and forget password )
                                 <a class="dropdown-item" href="/profile">
                                     Your Profile
                                 </a>
@@ -65,9 +65,32 @@
                               <li><a href="/logout" class=" dropdown-item">sign out</a></li>
                               <li><hr class="dropdown-divider"></li>
                             </ul>
+                        </li> -->
+
+                        <li class="nav-item dropdown ms-1 ms-auto  rounded">
+                            <a class="nav-link dropdown-toggle bg-warning" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hello <%= n1 %>
+                            </a>
+
+                            <ul class="dropdown-menu bg-warning">
+
+                                <li class="nav-item">
+                                    <a class="dropdown-item nav-link" href="/profile">
+                                        Your Profile
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/logout" class="nav-link dropdown-item">sign out</a>
+                                </li>
+
+                            </ul>
                         </li>
 
-                        <li class="ms-1 "><a href="" class="nav-link"><img src="<%= profile.url %>" alt="" width="40px"></a></li>
+                        <div class="ms-1 circle ">
+                            <img src="<%= profile.url %>" alt="">
+                        </div>
                         
                     </ul>
                 </div>
@@ -126,7 +149,7 @@
         <!-- slider div end -->
 
 
-        <button id="#contactITM" class="enquiry mb-5 text-dark text-bold btn btn-25 text-center bg-warning fixed-bottom border border-rounded mb-1">Enquire Now </button>
+        <button id="#contactITM" class=" enquiry mb-5 text-dark text-bold btn btn-25 text-center bg-warning fixed-bottom border border-rounded mb-1">Enquire Now </button>
 
 
     </header>
