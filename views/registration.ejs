@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="image/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=DM+Serif+Display&family=Montserrat:wght@200&family=PT+Sans&display=swap');
+    </style>
+</head>
+
+<body class="img1">
+    <header>
+
+
+        <div class="container-fluid ">
+            <div class="container align-item-center justify-content-center d-flex">
+                <div class="row row1 mt-5 mb-5 col-md-9">
+
+                    <!-- registration form -->
+                    <div class=" mt-5  text-center mb-5">
+
+                        <!-- clg logo -->
+                        <a href="#" class="text-center fom">
+                            <img src="image/psitm.png" class=" gs1">
+                        </a>
+
+                        <!-- form and text -->
+                        <div class="row mt-3 d-flex  align-item-center justify-content-center">
+
+                            <div class="bor h3 w-75">
+                                <h3>
+                                    <marquee scrollamount="12">Please fill out the following information to register for
+                                        admission at ITM</marquee>
+                                </h3>
+                            </div>
+                            <!-- form start -->
+                            
+                            <form class="pt-3 text-center bor  a1" action="/newuser" method="post" enctype="multipart/form-data">
+                                <% if(msg.length>0){ %>
+                                    <div class="alert alert-danger">
+                                        <%= msg %>
+                                    </div>
+                                <% } %>
+                                <div class="form-group  form-outline input-group mb-3 col-lg gform transi">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                    </div>
+                                    <input name="n"
+                                        class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="Full Name" type="text" >
+
+                                </div> <!-- form-name// -->
+
+
+                                <div class="form-group input-group mb-3 col-lg gform transi">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                    </div>
+                                    <input name="e"
+                                        class="form-control line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"
+                                        placeholder="Email address" type="email" >
+                                </div> <!-- form-email// -->
+
+
+                                <div class="form-group input-group mb-3 col-lg gform transi">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                    </div>
+                                    <input name="ph"
+                                        class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                        placeholder="Phone number" type="number" >
+                                </div> <!-- form-number// -->
+
+
+
+                                <div class="form-group input-group mb-3 gform transi">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <input name="ps"
+                                        class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="Create password" type="password" >
+                                </div> <!-- form-password// -->
+
+
+                                <div class="form-group input-group mb-3 gform transi">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <input name="cps"
+                                        class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="Confirm password" type="password" >
+                                        <!-- pattern="[0-9a-fA-F]{4,8}" -->
+                                        
+                                </div> <!-- form-password// -->
+
+
+
+                                <!-- media input -->
+                                <div class="form-group input-group bor gform">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa-regular fa-image"></i>
+                                            <input type="file" name="image"
+                                                class="form-control rounded line1 bg-light p-2 text-dark bg-opacity-25  shadow-none"
+                                                required>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- Declaration -->
+                                <div class="log1 mt-4 g5">
+                                    <input type="checkbox" id="declarationAgreement" required>
+                                    <label for="declarationAgreement">
+                                        <p class="">I agree to the above <a class="" data-bs-toggle="modal"
+                                                data-bs-target="#a1">Declaration</a></p>
+                                    </label>
+                                </div>
+
+                                <div class="modal mt-5 fade" id="a1">
+                                    <div class="modal-dialog modal-lg"> <!--modal-xl , sm, lg-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-danger">Declaration</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="close"></button>
+                                            </div> <!--modal header end-->
+                                            <div class="modal-body">
+                                                <p class="text-dark text-left">
+                                                    By submitting this registration form, I hereby declare that all the
+                                                    information provided above is true and accurate to the best of my
+                                                    knowledge. I understand that any falsification of information may
+                                                    result
+                                                    in the cancellation of my admission.
+                                                </p>
+                                                <button type="button" class="btn btn-warning text-white "
+                                                    data-bs-dismiss="modal" aria-label="close">OK</button>
+                                            </div><!--modal body-->
+                                        </div><!--modal dialog end-->
+                                    </div>
+                                </div>
+                                <!-- declaration end -->
+
+                                <div class="form-group mb-3 ">
+                                    <button type="submit" class="btn btn-danger btn-block g6"> Create Account </button>
+                                </div> <!-- form-group// -->
+                                <p class="text-center log mt-1">Already have an account? <a href="/"><b>Log
+                                            In</b></a> </p>
+                                <h6 class="text-white">or sign up using</h6>
+
+                                <div class="d-flex gap-2 mt-2 smedia">
+                                    
+                                    <button class="text-center text-white btn btn-sm   mb-2"><i
+                                            class="fa-brands fa-google fa-2x text-warning"></i> </button>
+                                    <button class="text-center text-white btn btn-sm   mb-2"><i
+                                            class="fa-brands fa-facebook fa-2x text-primary"></i> </button>
+                                    <button class="text-center text-white btn btn-sm  mb-2"><i
+                                            class="fa-brands fa-linkedin fa-2x text-info"></i> </button>
+                                    <button class="text-center text-white btn btn-sm   mb-2"><i
+                                            class="fa-solid fa-envelope fa-2x text-danger" style="color: #ffffff;"></i> </button>
+                                </div>
+                        
+                            </form>
+
+                            <!-- form end -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+            integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="Ajs/animreg.js"></script>
+    </header>
+</body>
+
+</html>

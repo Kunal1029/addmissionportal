@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="/image/logo.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=DM+Serif+Display&family=Montserrat:wght@200&family=PT+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body class="pro-body">
+    <header id="home">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid ">
+
+                <a href="" class="navbar-brand ">
+                    <img src="image/logo.png" alt="" class="ms-2 webimg">
+                    <img src="image/mobile.png" alt="" class="ms-5 mobimg">
+                </a>
+
+                <button class="navbar-toggler btn-border  border-0" data-bs-target="#mob_bar" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="mob_bar">
+
+                    <ul class="nav navbar-nav ms-auto">
+
+                        <li class="ms-1"><a href="/dashboard" class="nav-link">home</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown ms-1 ms-auto  rounded">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hello <%= n %>
+                            </a>
+
+                            <ul class="dropdown-menu bg-warning">
+
+                                <li class="nav-item">
+                                    <a class="dropdown-item nav-link" href="/profile">
+                                        Your Profile
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/logout" class="nav-link dropdown-item">sign out</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container mt-5">
+
+        <div class="row col-md-9">
+
+            <div class="col-md-6 text-center">
+                <img src="<%= profile.url %>" class="w-75 pro-img" alt="">
+            </div>
+
+            <div class="col-md-6 mt-5">
+                <h1 class="pro-h1 mt-3">Hello <%= n %>👋.</h1>
+                <div>
+                    <h3 class="pro-h3 mt-4">This is your profile page.</h3>
+                    <p class="mt-4">
+                        Email : <a>
+                            <%= e %><br>
+                        </a>
+                        Phone : <%= ph %>
+                    </p>
+                    <div class="container mt-5">
+
+                        <div class="row">
+                            <div class="text-center mt-5">
+                                <button type="button" class="btn btn-primary mt-1 ms-1 pro-button"
+                                    data-bs-toggle="modal" data-bs-target="#editprofile">Edit profile</button>
+                                <button type="button" class="btn btn-primary mt-1 ms-1 pro-button"
+                                    data-bs-toggle="modal" data-bs-target="#forgetpassword">Change Password</button>
+
+                                <!-- change password error messages -->
+                                <% if(msg.length> 0){ %>
+                                    <div class="alert alert-danger">
+                                        <%= msg %>
+                                    </div>
+                                    <% } %>
+
+                                        <!-- change password success messages -->
+                                        <% if(msg1.length> 0){ %>
+                                            <div class="alert alert-danger">
+                                                <%= msg1 %>
+                                            </div>
+                                            <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container mt-5">
+        <div class="row">
+            <div class="text-center">
+                <button type="button" class="btn btn-primary mt-2 ms-1 pro-button" data-bs-toggle="modal"
+                    data-bs-target="#editprofile">Edit profile</button>
+                <button  type="button" class="btn btn-primary mt-2 ms-1 pro-button" data-bs-toggle="modal"
+                data-bs-target="#forgetpassword">Forget password</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- profile edit Modal -->
+    <div class="modal pro-model" id="editprofile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content pro-modal-content">
+
+                <button type="button" class="btn-close ms-1 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- <div class="col-md-2"></div> -->
+                            <div class="col-md-12 text-center">
+                                <img src="<%= profile.url %>" alt="" class="userimageli" id="staticBackdropLabel">
+                            </div>
+
+                            <!-- <div class="col-md-2"></div> -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-body pro-modal-content bg-light">
+                    <!-- edit form -->
+                    <div class="container">
+                        <div class="row">
+
+                            <form class="text-center" action="/update_profile" method="post" enctype="multipart/form-data">
+                                <h4 class="text-dark">Edit Your Profile</h4>
+                                <div class="form-group  form-outline input-group mb-3 col-lg">
+                                    <!-- <div class="input-group-prepend"> -->
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                    <!-- </div> &nbsp; -->
+                                    <input name="n" value="<%= n %>" class="form-control bg-light text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="Full Name" type="text">
+                                </div> <!-- form-name// -->
+
+
+                                <div class="form-group input-group mb-3 col-lg">
+                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                    <input name="e" value="<%= e %>" 
+                                        class="form-control line bg-light text-dark bg-opacity-25 shadow-none rounded"
+                                        placeholder="Email address" type="email" readonly>
+                                </div> <!-- form-email// -->
+
+
+                                <div class="form-group input-group mb-3 col-lg">
+
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+
+                                    <input name="ph"  value="<%= ph %>" 
+                                        class="form-control bg-light text-dark bg-opacity-25  rounded shadow-none"
+                                        placeholder="Phone number" type="number">
+                                </div> <!-- form-number// -->
+
+                                <!-- media input -->
+                                <div class="form-group input-group">
+                                    <span class="input-group-text">
+                                        <!-- <i class="fa-regular fa-image"></i> -->
+                                        <img src="<%= profile.url %>" alt="" width="25px">
+                                    </span>
+                                    <input type="file" name="image" id="#file-input" class="form-control rounded bg-light p-2 text-dark bg-opacity-25  shadow-none">
+                                    
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-warning text-white" data-bs-dismiss="modal"
+                                        aria-label="close">Update</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="close">Cancel</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit form end-->
+
+
+    <!--forget password Modal -->
+    <div class="modal pro-model" id="forgetpassword" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header pro-modal-header">
+                    <h5 class="modal-title text-light " id="staticBackdropLabel">Change Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <!-- edit form -->
+                    <div class="container">
+                        <div class="row">
+                            <form class="text-center" action="/update_password" method="post">
+
+                                <div class="form-group input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <input name="currentpassword"
+                                        class="form-control bg-light text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="Current password" type="password">
+                                </div>
+
+                                <div class="form-group input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <input name="nps"
+                                        class="form-control bg-light text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="New password" type="password">
+                                </div> <!-- form-password// -->
+
+
+                                <div class="form-group input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <input name="cnps"
+                                        class="form-control bg-light text-dark bg-opacity-25  rounded  shadow-none"
+                                        placeholder="Confirm New password" type="password">
+                                    <!-- pattern="[0-9a-fA-F]{4,8}" -->
+
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-warning text-white" data-bs-dismiss="modal"
+                                        aria-label="close">Update</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- forget password end-->
+
+
+</body>
+
+</html>

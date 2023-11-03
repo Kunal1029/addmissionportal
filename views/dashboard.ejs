@@ -1,0 +1,995 @@
+<%- include('./header.ejs') %>
+
+
+    <main>
+
+        <!-- why itm -->
+        <div class="container-fluid whyitm  w-100" id="whyus">
+            <div class="container ">
+
+                <div class="row text-light">
+
+                    <h1 class="mb-4 mt-5">WHY ITM</h1>
+
+                    <div class="row text-white textbackgroundcolor
+                    ">
+                        <h6>1. Recognized Globally & by UGC, AICTE, COA, INC, PCI, NCTE, BCI, AIU, NAAC
+                        </h6>
+                        <h6>2. Centre of Excellence in School of Management and Dept of Computer Science</h6>
+                        <h6>3. World Class Infrastructure & Sports Facilities</h6>
+                        <h6>4. Ranked Amongst Top 24 Times</h6>
+                        <h6>5. Best Training & Placements in Central India</h6>
+                        <h6>6. Industry Ready Curriculum</h6>
+                        <h6>7. Activity Based Continuous Assessment (ABCA)</h6>
+                        <h6>8. Cafeteria Based Credit Earning System</h6>
+                        <h6>9. PBL (Project Based Learning)</h6>
+                        <h6>10. Active Entrepreneurship Cell (IdeaPad) and 24×7 Medical, Security</h6>
+
+                    </div>
+
+                    <div class="mt-5 mb-5  whyimages">
+                        <div class="row text-center">
+                            <div class="col-md-3 col-6 ">
+                                <img src="image/w1.jpg" class="w-75" alt="">
+                            </div>
+                            <div class="col-md-3  col-6">
+                                <img src="image/w2.jpg" class="w-75" alt="">
+                            </div>
+                            <div class="col-md-3  col-6 mt-2">
+                                <img src="image/w3.jpg" class="w-75" alt="">
+                            </div>
+                            <div class="col-md-3  col-6 mt-2">
+                                <img src="image/w5.jpg" class="w-75" alt="">
+                            </div>
+                        </div>
+
+
+                        <p class="text-light mt-5 mb-5">This is why we are consistently ranked No.1</p>
+
+                        <div class="text-center">
+                            <button class="mb-5 mt-3 btn btn-warning btn-lg"><a class="text-bold text-light"
+                                    href="https://itmuniversity.ac.in/">Read More about ITM</a></button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- why itm end-->
+
+        <!-- courses -->
+        <div class="container-fluid exploreCourse w-100">
+            <div class="row">
+                <h2 class="mt-5 w-75 col-md-6 h22 " id="allcourse">
+                    Explore our courses
+                </h2>
+            </div>
+
+            <!-- courses -->
+            <div class="mt-4">
+                <div class="container cardlimit   gap-3  d-flex align-item-center justify-content-evenly">
+
+                    <div class="col-md mt-2">
+
+                        <div class="card one">
+                            <div class="flipper">
+                                <img class="w-100 front" src="image/btechfinal.png" alt="">
+                                <div class="card-body  mb-5 text-center">
+                                    <h5 class="card-title ">B.Tech Course Info</h5>
+
+                                    <!-- table -->
+                                    <div class="">
+                                        <table class="table table-bordered border border-warning">
+                                            <tr>
+                                                <td> Duration</td>
+                                                <td>4 years (Full Time)</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Course Level</td>
+                                                <td> UG Degree</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Tuition Fees</td>
+                                                <td> INR 12.40 Lakh</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Type of University</td>
+                                                <td> Private</td>
+                                            </tr>
+
+                                        </table>
+                                    </div> <!-- table end -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="c">
+                            <div class="log1  g5">
+                                <div class="apply text-center mt-3">
+                                    <% if(bt) { %>
+                                        <a href="/coursedisplay"  class="btn btn-warning">Display</a>
+                                        <% } else { %>
+                                            <a data-bs-toggle="modal" data-bs-target="#btech">
+                                                <button class="btn btn-danger">Enroll now</button>
+                                            </a>
+                                            <% } %>
+
+                                </div>
+                            </div>
+
+                            <div class="container-fluid imglast">
+                                <div class="modal fade modal-danger" id="btech"><!--bg-light bg-opacity-75-->
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-light bg-opacity-10">
+                                                <h4 class="text-danger modal-title" id="course">Course Enrollment Form
+                                                </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="close"></button>
+                                            </div> <!--modal header end-->
+
+                                            <div class="modal-body ">
+                                                <h6 class="text-center mt-4  text-left">In Case any query, Kindly
+                                                    Contact:
+                                                    +916261432532</h6>
+                                                <div class="container-fluid rowlogin">
+                                                    <form class="a1 mt-4 mb-4" action="/course_insert" method="post">
+
+                                                        <div class=" w-75 ">
+                                                            <div
+                                                                class="form-group form-outline   input-group mb-3 col-lg gform transi">
+                                                                <input name="name"
+                                                                    class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded  shadow-none"
+                                                                    placeholder="Username" type="text" required>
+                                                            </div> <!-- form-name// -->
+                                                        </div>
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <input name="email"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"
+                                                                placeholder="Email address" type="email" required>
+                                                        </div> <!-- form-email// -->
+
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <input name="phone"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                                                placeholder="Enter Phone number " type="number"
+                                                                required>
+                                                        </div> <!-- form-number// -->
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <label class="pt-1">Date of Birth : </label>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <input name="DOB"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                                                type="date" required>
+                                                        </div> <!-- dob// -->
+
+                                                        <div class="gender mb-3 w-75">
+                                                            <label class="">Gender : </label><br>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="Gender" value="Male">
+                                                                <label class="form-check-label">Male</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="Gender" value="Female">
+                                                                <label class="form-check-label">Female</label>
+                                                            </div>
+
+                                                        </div><!-- gender// -->
+
+                                                        <div class="form-group mb-3 w-75">
+                                                            <label>Address</label>
+                                                            <textarea name="address"
+                                                                class="form-control  form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"></textarea>
+                                                        </div><!-- Address// -->
+
+
+                                                        <div class="form-group mb-3 w-75">
+
+                                                            <select name="program"
+                                                                class="form-control  form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded">
+
+                                                                <option>Bachelors of Technology (B.Tech) </option>
+
+                                                            </select>
+                                                        </div><!-- Course// -->
+
+                                                        <div class="text-center">
+                                                            <button type="submit" class="btn btn-warning text-white "
+                                                                data-bs-dismiss="modal"
+                                                                aria-label="close">Submit</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div><!--modal body-->
+                                        </div><!--modal dialog end-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md  mt-2">
+                        <div class="card two">
+                            <div class="flipper">
+                                <img class="w-100 front" src="image/bca1.png" alt="">
+                                <div class="card-body mb-5">
+                                    <h5 class="card-title ">BCA Course Info</h5>
+                                    <!-- table -->
+                                    <div class="">
+                                        <table class="table table-bordered border-warning">
+                                            <tr>
+                                                <td> Duration</td>
+                                                <td>3 years (Full Time)</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Course Level</td>
+                                                <td> UG Degree</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Tuition Fees</td>
+                                                <td> INR 6.00 Lakh</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Type of University</td>
+                                                <td> Private</td>
+                                            </tr>
+
+
+                                        </table>
+                                    </div> <!-- table end -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="c">
+                            <div class="log1  g5">
+                                <div class="apply text-center mt-3">
+                                    <% if(bca) { %>
+                                        <a href="/coursedisplay"  class="btn btn-warning">Display</a>
+                                    <% } else { %>
+                                        <a data-bs-toggle="modal" class="" data-bs-target="#bca">
+                                            <button class="btn btn-danger">Enroll now</button>
+                                        </a>
+                                    <% } %>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid imglast">
+                                <div class="modal fade modal-danger" id="bca"><!--bg-light bg-opacity-75-->
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-light bg-opacity-10">
+                                                <h4 class="text-danger modal-title" id="course">Course Enrollment Form
+                                                </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="close"></button>
+                                            </div> <!--modal header end-->
+
+                                            <div class="modal-body ">
+
+                                                <h6 class="text-center mt-4  text-left">In Case any query, Kindly
+                                                    Contact:
+                                                    +916261432532</h6>
+
+                                                <div class="container-fluid rowlogin">
+                                                    <form class="a1 mt-4 mb-4" action="/course_insert" method="post">
+
+                                                        <div class=" w-75 ">
+                                                            <div
+                                                                class="form-group form-outline   input-group mb-3 col-lg gform transi">
+                                                                <input name="name"
+                                                                    class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded  shadow-none"
+                                                                    placeholder="Username" type="text" required>
+                                                            </div> <!-- form-name// -->
+                                                        </div>
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <input name="email"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"
+                                                                placeholder="Email address" type="email" required>
+                                                        </div> <!-- form-email// -->
+
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <input name="phone"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                                                placeholder="Enter Phone number " type="number"
+                                                                required>
+                                                        </div> <!-- form-number// -->
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <label class="pt-1">Date of Birth : </label>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <input name="DOB"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                                                type="date" required>
+                                                        </div> <!-- dob// -->
+
+                                                        <div class="gender mb-3 w-75">
+                                                            <label class="">Gender : </label><br>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="Gender" value="Male">
+                                                                <label class="form-check-label">Male</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="Gender" value="Female">
+                                                                <label class="form-check-label">Female</label>
+                                                            </div>
+
+                                                        </div><!-- gender// -->
+
+                                                        <div class="form-group mb-3 w-75">
+                                                            <label>Address</label>
+                                                            <textarea name="address"
+                                                                class="form-control  form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"></textarea>
+                                                        </div><!-- Address// -->
+
+
+
+
+
+
+                                                        <div class="form-group mb-3 w-75">
+
+                                                            <select name="program"
+                                                                class="form-control  form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded">
+
+                                                                <option>Bachelors of Computer & Applications (BCA)
+                                                                </option>
+
+                                                            </select>
+                                                        </div><!-- Course// -->
+                                                        <div class="text-center">
+                                                            <button type="submit" class="btn btn-warning text-white "
+                                                                data-bs-dismiss="modal"
+                                                                aria-label="close">Submit</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div><!--modal body-->
+                                        </div><!--modal dialog end-->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md  mt-2">
+                        <div class="card three">
+                            <div class="flipper">
+                                <img class="w-100 front" src="image/mcafinal.png" alt="">
+                                <div class="card-body mb-5">
+                                    <h5 class="card-title">MCA Course Info</h5>
+                                    <!-- table -->
+                                    <div class="">
+                                        <table class="table table-bordered border-warning">
+                                            <tr>
+                                                <td> Duration</td>
+                                                <td>2 years (Full Time)</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Course Level</td>
+                                                <td> PG Degree</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Tuition Fees</td>
+                                                <td> INR 6.00 Lakh</td>
+                                            </tr>
+                                            <tr>
+                                                <td> Type of University</td>
+                                                <td> Private</td>
+                                            </tr>
+
+
+                                        </table>
+                                    </div> <!-- table end -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="c">
+                            <div class="log1  g5">
+                                <div class="apply text-center mt-3">
+                                    <% if(mca) { %>
+                                        <a href="/coursedisplay"  class="btn btn-warning">Display</a>
+                                    <% } else { %>
+                                        <a data-bs-toggle="modal" class="" data-bs-target="#mca">
+                                            <button class="btn btn-danger">Enroll now</button>
+                                        </a>
+                                    <% } %>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid imglast">
+                                <div class="modal fade modal-danger" id="mca"><!--bg-light bg-opacity-75-->
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-light bg-opacity-10">
+                                                <h4 class="text-danger modal-title" id="course">Course Enrollment Form
+                                                </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="close"></button>
+                                            </div> <!--modal header end-->
+
+                                            <div class="modal-body ">
+                                                <h6 class="text-center mt-4  text-left">In Case any query, Kindly
+                                                    Contact:
+                                                    +916261432532</h6>
+                                                <div class="container-fluid rowlogin">
+                                                    <form class="a1 mt-4 mb-4" action='/course_insert' method="post">
+
+                                                        <div class="w-75">
+                                                            <div
+                                                                class="form-group form-outline   input-group mb-3 col-lg gform transi">
+                                                                <input name="name"
+                                                                    class="form-control line bg-light p-2 text-dark bg-opacity-25  rounded  shadow-none"
+                                                                    placeholder="Username" type="text" required>
+                                                            </div> <!-- form-name// -->
+                                                        </div>
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <input name="email"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"
+                                                                placeholder="Email address" type="email" required>
+                                                        </div> <!-- form-email// -->
+
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <input name="phone"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                                                placeholder="Enter Phone number " type="number"
+                                                                required>
+                                                        </div> <!-- form-number// -->
+
+
+                                                        <div
+                                                            class="form-group w-75 input-group mb-3 col-lg gform transi">
+                                                            <label class="pt-1">Date of Birth : </label>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <input name="DOB"
+                                                                class="form-control form-control-sm line bg-light p-2 text-dark bg-opacity-25  rounded shadow-none"
+                                                                type="date" required>
+                                                        </div> <!-- dob// -->
+
+                                                        <div class="gender mb-3 w-75">
+                                                            <label class="">Gender : </label><br>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="Gender" value="Male">
+                                                                <label class="form-check-label">Male</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="Gender" value="Female">
+                                                                <label class="form-check-label">Female</label>
+                                                            </div>
+
+                                                        </div><!-- gender// -->
+
+                                                        <div class="form-group mb-3 w-75">
+                                                            <label>Address</label>
+                                                            <textarea name="address"
+                                                                class="form-control  form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded"></textarea>
+                                                        </div><!-- Address// -->
+
+
+
+
+
+
+                                                        <div class="form-group mb-3 w-75">
+
+                                                            <select name="program"
+                                                                class="form-control  form-control-sm line bg-light p-2 text-dark bg-opacity-25 shadow-none rounded">
+
+                                                                <option>Masters of Computer & Applications (MCA)
+                                                                </option>
+                                                            </select>
+                                                        </div><!-- Course// -->
+
+                                                        <div class="text-center">
+                                                            <button type="submit" class="btn btn-warning text-white "
+                                                                data-bs-dismiss="modal"
+                                                                aria-label="close">Submit</button>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+
+                                            </div><!--modal body-->
+                                        </div><!--modal dialog end-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- courses end -->
+
+            <div class="container col-md-12 mt-5 border border-light bg-dark w-100">
+                <div class="row mt-2 mb-2 othercourse d-flex align-item-center justify-content-center">
+
+                    <h3 class="text-white col-10 mt-2 ">Other Programs </h3>&nbsp;
+                    <marquee scrollamount="12">
+                        <button class="btn  col-md-1  bg-warning">
+                            <a href="" class="text-dark">MBA</a>
+                        </button>
+                        <button class="btn   col-md-1 bg-warning">
+                            <a href="" class="text-dark">BSC</a>
+                        </button>
+                        <button class="btn  col-md-1  bg-warning">
+                            <a href="" class="text-dark">MSC</a>
+                        </button>
+                        <button class="btn   col-md-1  bg-warning">
+                            <a href="" class="text-dark">BJMC</a>
+                        </button>
+                        <button class="btn   col-md-1  bg-warning">
+                            <a href="" class="text-dark">School</a>
+                        </button>
+                        <button class="btn  col-md-1 bg-warning">
+                            <a href="" class="text-dark">Nursing</a>
+                        </button>
+                        <button class="btn   col-md-1 bg-warning">
+                            <a href="" class="text-dark">LAW</a>
+                        </button>
+                        <button class="btn col-md-1 bg-warning">
+                            <a href="" class="text-dark">BBA</a>
+                        </button>
+                    </marquee>
+                </div>
+            </div>
+
+        </div>
+        <!-- courses end -->
+
+
+        <!-- Student life -->
+        <div class="container-fluid stulife w-100" id="ourstudent">
+            <div class="row">
+                <div class="">
+                    <h1 class="mt-4 mb-3"><span>Student</span> Life</h1>
+                </div>
+            </div>
+            <div class="container nn">
+
+                <div class="row">
+
+                    <div class="lablib d-flex gap-2 mb-2">
+                        <div class="col-md-2  text-center ">
+                            <img src="image/student/s1.jpg" class="photos w-100" alt="">
+                        </div>
+                        <div class="col-md-2 ">
+                            <img src="image/student/s2.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2 ">
+                            <img src="image/student/s3.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2 ">
+                            <img src="image/student/s4.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2 ">
+                            <img src="image/student/s5.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2 ">
+                            <img src="image/student/s6.jpg" class="w-100" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="lablib col-md-12 d-flex gap-2 mb-2">
+                        <div class="col-md-2 ">
+                            <img src="image/student/sp5.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/sp6.jpg" class="w-100" alt="">
+                        </div>
+
+
+                        <div class="col-md-2">
+                            <img src="image/student/sp4.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/s11.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/s12.jpg" class=" w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/s13.jpg" class=" w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="lablib  col-md-12 d-flex gap-1 mb-3">
+                        <div class="col-md-2">
+                            <img src="image/student/s7.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/s8.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/s9.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/sp1.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/sp2.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="image/student/sp3.jpg" class="w-100" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- mob-view -->
+            <div class="container nn1">
+
+                <div class="row">
+
+                    <div class="lab col-md-12 d-flex gap-2 mb-2">
+                        <div class="col-4 w-100 text-center">
+                            <img src="image/student/s1.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s2.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s3.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s4.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s5.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s6.jpg" class="w-100" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row ms-1">
+
+                    <div class="lab col-md-12 d-flex gap-2 mb-2">
+                        <div class="col-4  w-100">
+                            <img src="image/student/sp5.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/sp6.jpg" class="w-100" alt="">
+                        </div>
+
+
+                        <div class="col-4 w-100">
+                            <img src="image/student/sp4.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s11.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s12.jpg" class=" w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s13.jpg" class=" w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row ms-1">
+
+                    <div class="lab  col-md-12 d-flex gap-1 mb-3">
+                        <div class="col-4 w-100 ">
+                            <img src="image/student/s7.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s8.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/s9.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/sp1.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/sp2.jpg" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 w-100">
+                            <img src="image/student/sp3.jpg" class="w-100" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Student life end -->
+
+        <!-- about -->
+        <div class="about container-fluid kk w-100  " id="about1">
+
+            <div class=" rounded">
+                <div class="row">
+                    <h1 class="mt-5 text-center text-light fnt">
+                        About <span
+                            style="color: yellow; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">ITM</span>
+                    </h1>
+                </div>
+
+                <h5 class="mt-3 col-md-11 fnt text-white">
+                    Welcome to ITM University Gwalior
+                    You’re probably already aware that ITM University Gwalior is one of the best universities in
+                    India
+                    in
+                    terms of its academic reputation and infrastructure, but did you also know:
+                </h5>
+            </div>
+
+
+            <div class="container-fluid aboutfont d-flex align-item-center justify-content-center ">
+                <div class="text-center mt-2 col-md mb-2">
+                    <img class="" src="image/about.jpg" alt="">
+                </div>
+
+                <p class=" col-md ms-2 textbackgroundcolor  text-white txt fnt ">
+                    ITM University Gwalior offers virtually unlimited opportunities for inquiry, discovery, and
+                    education
+                    with uniquely crafted educational programmes — and yet is a close community that provides a real
+                    sense
+                    of belonging. Here it is like playing under the most inspiring captain who brings his team
+                    together
+                    and
+                    infuses it with a great sense of energy and motivation during all times. ITM University is a
+                    multidisciplinary university known for its quality of research and teaching across the academic
+                    spectrum, with subjects spanning the sciences, engineering, management, fine arts, social
+                    sciences,
+                    arts, nursing etc.
+                </p>
+            </div>
+        </div>
+        <!-- about end-->
+
+        <!-- international students -->
+        <div class="container-fluid interstu" id="international">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mt-5 text-white ">
+                        <h1 class="text-danger">International Students Division</h1>
+                        <h2 class="mt-4">We at ITM University feel proud, bringing the International fraternity together
+                        </h2>
+                        <p class="mt-3 ">We feel that potential, Efficiency and Excellence is not border
+                            limited. Instead it is, fundamentally to be celebrated beyond imagination. Students from all
+                            across the world are bringing their dreams to reality. We welcome you to ITM University
+                            Celebrating Dreams.</p>
+
+                        <div class="text-center mt-4">
+                            <iframe class="w-100" height="280" src="https://www.youtube.com/embed/HeNL78rVSBs"
+                                title="Biki Maya - Student Testimonial" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <img src="image/student/survey.png" class="w-100 mb-3 mt-3" alt="">
+
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <iframe height="300" class="w-100 mt-5" src="https://www.youtube.com/embed/14qdDw_EijU"
+                            title="Student Testimonial - ITM University Gwalior" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/Ds80t4GtZ2Q"
+                            title="Student Testimonial - ITM University Gwalior" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe> -->
+                        <img src="image/student/inter1.png" class="w-75 mb-4" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- international students end -->
+
+    </main>
+    <!-- <hr> -->
+
+    <!-- footer / contact us start-->
+    <!-- <footer class=" imgf text-white w-100" id="contactITM">
+        <div class="container w-100 ">
+            <div class="row d-flex align-item-center justify-content-center">
+
+                <div class="col-md-3 bg-dark part1 mt-3 mb-3 text-center">
+                    <img src="image/psitm.png" class="w-75 mt-3" alt="">
+                    <div class="contact">
+                        <h3 class="mt-3 mb-3 text-warning">Contact Us</h3>
+                        <p class="">
+                            ITM University<br>
+                            3rd Floor, Astoria Complex, Beside 7Seas Mall Fatehgunj, Gwalior: 390002<br>
+                            Contact No: 7043-34-1951 ,7043-34-1952/ 53, 9574 00 5022 <br>
+                            E-mail: admissionproject23@gmail.com
+                        </p>
+
+                        <div class="follow mt-4">
+                            <h5 class="text-warning mb-4 text-bold">Follow US</h5>
+
+                            <div class="d-flex mb-4 align-item-center justify-content-center gap-2 mt-2 smedia">
+
+                                <a href="https://www.youtube.com/@itmuniversitygwalior" target=_blank>
+                                    <button
+                                        class=" col-md-2  text-center text-white btn btn-sm btn-border border-0  mb-2"><i
+                                            class="fa-brands fa-youtube fa-2x text-danger"></i> </button>
+                                </a>
+
+                                <a href="https://www.facebook.com/ITMUNIVERSITYINDIA/?fref=ts" target=_blank>
+                                    <button
+                                        class="col-md-2 text-center text-white btn btn-sm  btn-border border-0 mb-2"><i
+                                            class="fa-brands fa-facebook fa-2x text-primary"></i> </button>
+
+                                </a>
+
+                                <a href="https://www.linkedin.com/school/15118470/admin/" target=_blank>
+                                    <button
+                                        class="col-md-2 text-center text-white btn btn-sm btn-border border-0 mb-2"><i
+                                            class="fa-brands fa-linkedin fa-2x text-info"></i> </button>
+                                </a>
+
+                                <a href="https://twitter.com/ITMUGwalior" target=_blank>
+                                    <button
+                                        class="col-md-2 text-center text-white btn btn-sm  btn-border border-0 mb-2"><i
+                                            class="fa-brands fa-twitter fa-2x" style="color: #1267fb;"></i>
+                                    </button>
+                                </a>
+
+                                <a href="https://www.instagram.com/itmuniversitygwl/" target=_blank>
+                                    <button
+                                        class="col-md text-center text-white btn btn-sm  btn-border border-0 mb-2"><i
+                                            class="fa-brands fa-instagram fa-2x" style="color: #fa045e;"></i>
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-3 contact mt-4 ms-2 ">
+
+                    <div class="card mt-3 ks mb-3  ">
+
+                        <h5 class="ms-2  mt-2"><i class="fa-regular fa-map fa-xl" style="color: #9cad2de6;"></i> &nbsp;
+                            <span class="text-white">
+                                Gwalior Sitholi Road, India
+                            </span>
+                        </h5>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52756.16276535936!2d78.19371091542243!3d26.139759412083038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c497178e8281%3A0x3a555c950be477e8!2sITM%20University%20Gwalior!5e1!3m2!1sen!2sin!4v1696016114476!5m2!1sen!2sin"
+                            class="w-100 mb-3" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+                    </div>
+
+
+                    <h4 class="">Useful Links</h4>
+                    <hr class="w-50 text-warning">
+
+                    <div class="row">
+                        <div class="col-md-6 links">
+                            <h6 class="mb-3">About us</h6>
+                            <h6 class="mb-3">Service</h6>
+                            <h6 class="mb-3">Projects</h6>
+                            <h6 class="mb-3">Our Team</h6>
+                        </div>
+                        <div class="col-md-6 links">
+                            <h6 class="mb-3">Contact us</h6>
+                            <h6 class="mb-3">Blog</h6>
+                            <h6 class="mb-3">Testimonials</h6>
+                            <h6 class="mb-3">Faq</h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 mt-5 help">
+                    <h5 class="mb-3"><i class="fa-solid fa-circle-info"></i>&nbsp; Need help choosing a Program?</h5>
+
+                    <form class="w-100 text-center w-75" method="post" action="/enquiryform">
+
+                        <div class="col-md mb-3">
+                            <input required name="name" type="text" class="form-control" placeholder="Name*" />
+                        </div>
+                        <div class="col-md mb-3">
+                            <input required name="city" type="text" class="form-control" required placeholder="City*" />
+                        </div>
+                        <div class="col-md mb-3">
+                            <input required name="email" class="form-control" placeholder="Email ID*" type="email">
+                        </div>
+                        <div class="col-md mb-3">
+                            <input required name="phone" type="number" class="form-control" required
+                                placeholder="Mobile Number*" />
+                        </div>
+                        <div class="col-md mb-3">
+                            <input required name="education" type="text" class="form-control" required
+                                placeholder="Higher education* : eg- Graduted, UnderGraduation , School etc" />
+                        </div> -->
+
+                        <!-- Submit Button -->
+                        <!-- <button class="btn btn-danger" type="submit">SUBMIT</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+ -->
+
+
+        <!-- copyright -->
+
+        <!-- <hr>
+
+
+        <div class="container">
+            <div class="row ">
+                <div class="copywrite  mt-1 d-flex align-item-center justify-content-evenly">
+
+                    <h6 class=" mb-2">© 2023 ITM University Gwalior</h6>
+                    <p>Terms of Use | Privacy & Cookie statement | Disclaimer</p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer> 
+
+
+    </body>
+
+    </html> -->
+
+
+    <%- include('./footer.ejs') %>

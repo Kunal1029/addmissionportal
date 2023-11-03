@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img1 {
+    background-image: url("../image/bgreg.jpg");
+    width: 98vw;
+    /* height: 96vh; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rowlogin {
+    background: linear-gradient(#5680e9aa, #84ceebc4, #5abaeab7, #c1c8e4bd, #8760d0a8);
+    width: 70%;
+    /* height: 96vh; */
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.rowlogin:hover {
+    box-shadow: 0px 4px 7px #222222;
+
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+.input-group {
+    border: 1px rgba(15, 15, 15, 0.416) solid;
+    border-radius: 10px;
+    border-top: none;
+    border-right: none;
+}
+
+.line {
+    border: none;
+    background-color: transparent;
+    /* padding-left: 10px; */
+    border-bottom: 1px solid #F44D2D;
+    /* border-top: none; */
+}
+
+.input-group-prepend {
+    /* margin-right: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fom img {
+    width: 25%;
+}
+
+.form-group {
+    width: 85%;
+}
+
+.transi {
+    transition: color 2s ease-in-out 3s;
+}
+
+.transi:hover {
+    width: 90%;
+    box-shadow: -3px 5px 4px rgba(30, 30, 8, 0.653);
+}
+
+.a1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 60%; */
+}
+
+.h3 h3 {
+    font-size: 0.7em;
+    font-weight: bolder;
+    width: 100%;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgb(20, 255, 36);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.carousel{
+    display: none;
+}
+.smedia button:hover{
+    /* width: 50px; */
+    box-shadow: -1px 1px 5px black;
+    border-radius: 100%;
+ }
+/*  */
+
+
+@media(max-width:550px) and (orientation : landscape) {
+    .fom img {
+        width: 50vw;
+    }
+
+    .cardall {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -10px;
+        padding: 0px;
+    }
+
+    .cardall .card {
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 12px;
+    }
+
+    .rowlogin {
+
+        border-radius: 0px;
+
+    }
+
+    .log {
+        font-size: 0.6em;
+    }
+
+}
+@media (max-height:1180) and (max-width:820) {
+   
+}
+
+@media (max-width:767px) {
+    .rowlogin {
+        background: linear-gradient(#5680e9aa, #84ceebc4, #5abaeab7, #c1c8e4bd, #8760d0a8);
+        width: 100%;
+        /* height: 96vh; */
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+
+    .rowlogin:hover {
+        box-shadow: 0px 4px 7px #222222;
+
+    }
+
+    .img1 {
+        background-image: url("../image/bgreg.jpg");
+        width: 98vw;
+        /* height: 96vh; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: inherit;
+    }
+
+    .imgsitm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* gap: 2; */
+    }
+
+    .caros {
+        display: none;
+    }
+    .mobcaro{
+        display: block;
+    }
+    .fom {
+        width: 100%;
+    }
+    .fom img {
+        width: 75%;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="/image/logo.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=DM+Serif+Display&family=Montserrat:wght@200&family=PT+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav class="navbar navbar-expand-md fixed-top">
+            <div class="container-fluid ">
+
+                <a href="" class="navbar-brand ">
+                    <img src="image/logo.png" alt="" class="ms-2 webimg">
+                    <img src="image/mobile.png" alt="" class="ms-5 mobimg">
+                </a>
+
+                <button class="navbar-toggler btn-border  border-0" data-bs-target="#mob_bar" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="mob_bar">
+                    <ul class="nav navbar-nav ms-auto">
+                        <li class="ms-1"><a href="#home" class="nav-link">home</a></li>
+                        <li class="ms-1"><a href="#whyus" class="nav-link">Why ITM</a></li>
+                        <li class="ms-1"><a href="#allcourse" id="#course" class="nav-link">Courses</a></li>
+                        <li class="ms-1"><a href="#ourstudent" class="nav-link">Our Gallery</a></li>
+                        <li class="ms-1"><a href="#about1" class="nav-link">about</a></li>
+                        <li class="ms-1"><a href="#international" class="nav-link">Testimonials</a></li>
+                        <li class="ms-1"><a href="#contactITM" class="nav-link">contact us</a></li>
+                        <!-- <li class="ms-1"><%= n %></li>
+                        <li class="ms-1 ss  rounded"></li> -->
+                        <li class="nav-item dropdown ms-1 ss  rounded bg-warning ">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Hello <%= n %>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                              <li> 
+                                <!-- User profile (edit profile and forget password ) -->
+                                <a class="dropdown-item" href="/profile">
+                                    Your Profile
+                                </a>
+                              </li>
+
+                              <li><a href="/logout" class=" dropdown-item">sign out</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                            </ul>
+                        </li>
+
+                        <li class="ms-1 "><a href="" class="nav-link"><img src="<%= profile.url %>" alt="" width="40px"></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- slider div  -->
+
+        <div class="carousel slide" data-bs-ride="carousel" id="ab">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#ab" data-bs-slide-to="0" class="active"></button>
+
+                <!-- <button type="button" data-bs-target="#ab" data-bs-slide-to="1"></button> -->
+
+                <!-- <button type="button" class="bigimg" data-bs-target="#ab" data-bs-slide-to="1"></button> -->
+                <button type="button" data-bs-target="#ab" data-bs-slide-to="1"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active " data-bs-interval="4000">
+                    <video autoplay muted loop src="image/itmvid.mp4"></video>
+
+                </div>
+                <!-- 
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img  style="height: 90vh;"  src="https://content3.jdmagicbox.com/comp/gwalior/y5/9999px751.x751.140507190034.a4y5/catalogue/itm-university-sithouli-gwalior-institutes-for-b-tech-engineering-kgihaz4qma.jpg" class="w-100">
+                    
+                </div> -->
+
+                <!-- <div class="carousel-item bigimg" data-bs-interval="2000">
+                    <img src="image/convoca.jpg" style="height: 98vh;" class="w-100">
+                </div> -->
+
+                <div class="carousel-item " data-bs-interval="2000">
+                    <img src="image/smallimg.jpg" class="w-100">
+                </div>
+
+
+
+            </div><!--carusal inner -->
+
+
+            <button type="button" data-bs-target="#ab" data-bs-slide="prev" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button type="button" data-bs-target="#ab" data-bs-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+        <!-- slider div end -->
+
+
+        <button id="#contactITM" class="enquiry mb-5 text-dark text-bold btn btn-25 text-center bg-warning fixed-bottom border border-rounded mb-1">Enquire Now </button>
+
+
+    </header>
