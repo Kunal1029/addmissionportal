@@ -46,7 +46,7 @@ class NewEnrollment {
             // const mca = await CourseModel.find({course : 'Bachelors of Computer & Applications (BCA)'})
             // console.log(req.params.id)
             // res.render('Coursedisplay', { d: data, n: name, profile: image , bt : btech , mca: mca , bca : bca  })
-            res.render('coursedisplay', { d: data, n: name, profile: image  })
+            res.render('coursedisplay', { d: data, n: name.charAt(0).toUpperCase(), profile: image  })
         } catch (error) {
             console.log(error)
         }
@@ -56,7 +56,7 @@ class NewEnrollment {
             // console.log(req.params.id)
             const data = await CourseModel.findById(req.params.id)
             const { name, image } = req.data1;
-            res.render('courseview', { d: data, n: name, profile: image })
+            res.render('courseview', { d: data, n: name.charAt(0).toUpperCase(), profile: image })
         } catch (error) {
             console.log(error)
         }
@@ -66,7 +66,7 @@ class NewEnrollment {
             // console.log(req.params.id)
             const data = await CourseModel.findById(req.params.id)
             const { name, image } = req.data1;
-            res.render('courseedit', { d: data, n: name, profile: image })
+            res.render('courseedit', { d: data, n: name.charAt(0).toUpperCase(), profile: image })
         } catch (error) {
             console.log(error)
         }
