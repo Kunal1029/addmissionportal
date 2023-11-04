@@ -26,7 +26,7 @@
 
 <body class="pro-body">
     <header id="home">
-        <nav class="navbar navbar-expand-md">
+        <!-- <nav class="navbar navbar-expand-md">
             <div class="container-fluid ">
 
                 <a href="" class="navbar-brand ">
@@ -69,6 +69,62 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </nav> -->
+        <nav class="navbar navbar-expand-md ">
+            <div class="container-fluid ">
+
+                <a href="" class="navbar-brand ">
+                    <img src="image/logo.png" alt="" class="ms-2 webimg">
+                    <img src="image/mobile.png" alt="" class="ms-5 mobimg">
+                </a>
+
+                <button class="navbar-toggler btn btn-border  border-0" data-bs-target="#mob_bar" data-bs-toggle="collapse">
+                    <div class="circle-web">
+                        <img src="<%= profile.url %>" alt="">
+                    </div>
+                </button>
+
+                <div class="navbar-collapse collapse d-flex text-align-center justify-content-center" id="mob_bar">
+
+                    <ul class="nav navbar-nav">
+
+                        <li class="nav-item ms-2"><a href="/dashboard" class="nav-link">Home</a></li>
+                      
+
+                        <ul class="nav navbar-nav">
+
+                            <li class="nav-item dropdown rounded ">
+
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Hello <%= n %>
+                                </a>
+
+                                <ul class="dropdown-menu  text-center ">
+
+                                    <li class="nav-item  ">
+                                        <a class="dropdown-item bg-warning nav-link" href="/profile">
+                                            Your Profile
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item  ">
+                                        <a href="/logout" class="bg-warning nav-link dropdown-item">Sign out</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+                    </ul>
+                    <div class="ms-3  circle  webimg">
+                        <img src="<%= profile.url %>" alt="">
+                    </div>
+
+                </div>
+
             </div>
         </nav>
     </header>
@@ -118,8 +174,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -164,20 +218,22 @@
                     <div class="container">
                         <div class="row">
 
-                            <form class="text-center" action="/update_profile" method="post" enctype="multipart/form-data">
+                            <form class="text-center" action="/update_profile" method="post"
+                                enctype="multipart/form-data">
                                 <h4 class="text-dark">Edit Your Profile</h4>
                                 <div class="form-group  form-outline input-group mb-3 col-lg">
                                     <!-- <div class="input-group-prepend"> -->
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                     <!-- </div> &nbsp; -->
-                                    <input name="n" value="<%= n %>" class="form-control bg-light text-dark bg-opacity-25  rounded  shadow-none"
+                                    <input name="n" value="<%= n %>"
+                                        class="form-control bg-light text-dark bg-opacity-25  rounded  shadow-none"
                                         placeholder="Full Name" type="text">
                                 </div> <!-- form-name// -->
 
 
                                 <div class="form-group input-group mb-3 col-lg">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                                    <input name="e" value="<%= e %>" 
+                                    <input name="e" value="<%= e %>"
                                         class="form-control line bg-light text-dark bg-opacity-25 shadow-none rounded"
                                         placeholder="Email address" type="email" readonly>
                                 </div> <!-- form-email// -->
@@ -187,7 +243,7 @@
 
                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 
-                                    <input name="ph"  value="<%= ph %>" 
+                                    <input name="ph" value="<%= ph %>"
                                         class="form-control bg-light text-dark bg-opacity-25  rounded shadow-none"
                                         placeholder="Phone number" type="number">
                                 </div> <!-- form-number// -->
@@ -198,15 +254,17 @@
                                         <!-- <i class="fa-regular fa-image"></i> -->
                                         <img src="<%= profile.url %>" alt="" width="25px">
                                     </span>
-                                    <input type="file" name="image" id="#file-input" class="form-control rounded bg-light p-2 text-dark bg-opacity-25  shadow-none">
-                                    
+                                    <input type="file" name="image" id="#file-input"
+                                        class="form-control rounded bg-light p-2 text-dark bg-opacity-25  shadow-none">
+
                                 </div>
 
 
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-warning text-white" data-bs-dismiss="modal"
                                         aria-label="close">Update</button>
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="close">Cancel</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                        aria-label="close">Cancel</button>
                                 </div>
 
                             </form>

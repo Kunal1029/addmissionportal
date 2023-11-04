@@ -26,7 +26,7 @@
 
 <body>
     <header id="home">
-        <nav class="navbar navbar-expand-md fixed-top">
+        <nav class="navbar navbar-expand-md fixed-top mr-auto">
             <div class="container-fluid ">
 
                 <a href="" class="navbar-brand ">
@@ -34,48 +34,57 @@
                     <img src="image/mobile.png" alt="" class="ms-5 mobimg">
                 </a>
 
-                <button class="navbar-toggler btn-border  border-0" data-bs-target="#mob_bar" data-bs-toggle="collapse">
-                    <span class="navbar-toggler-icon "></span>
+                <button class="navbar-toggler btn btn-border  border-0" data-bs-target="#mob_bar" data-bs-toggle="collapse">      
+                        <div class="circle-web">
+                            <img src="<%= profile.url %>" alt="">
+                        </div>
                 </button>
 
                 <div class="navbar-collapse collapse" id="mob_bar">
-                    <ul class="nav navbar-nav ms-auto">
-                        <li class="ms-1"><a href="/dashboard" class="nav-link">home</a></li>
-                        <li class="ms-1"><a href="#whyus" class="nav-link">Why ITM</a></li>
-                        <li class="ms-1"><a href="#allcourse" id="#course" class="nav-link">Courses</a></li>
-                        <li class="ms-1"><a href="#ourstudent" class="nav-link">Our Gallery</a></li>
-                        <li class="ms-1"><a href="#about1" class="nav-link">about</a></li>
-                        <li class="ms-1"><a href="#international" class="nav-link">Testimonials</a></li>
-                        <li class="ms-1"><a href="#contactITM" class="nav-link">contact us</a></li>
-                     
 
-                        <li class="nav-item dropdown ms-1 ms-auto  rounded">
-                            <a class="nav-link dropdown-toggle bg-warning" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                    <ul class="nav navbar-nav ms-auto">
+
+                        <li class="nav-item ms-2"><a href="/dashboard" class="nav-link">Home</a></li>
+                        <li class="nav-item ms-2"><a href="#whyus" class="nav-link">Why ITM</a></li>
+                        <li class="nav-item ms-2"><a href="#allcourse" id="#course" class="nav-link">Courses</a></li>
+                        <li class="nav-item ms-2"><a href="#ourstudent" class="nav-link">Our Gallery</a></li>
+                        <li class="nav-item ms-2"><a href="#about1" class="nav-link">About</a></li>
+                        <li class="nav-item ms-2"><a href="#international" class="nav-link">Testimonials</a></li>
+                        <li class="nav-item ms-2"><a href="#contactITM" class="nav-link">Contact us</a></li>
+                   
+                    </ul>
+                    <ul class="nav navbar-nav ms-auto ">
+
+                        <li class="nav-item dropdown rounded ">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Hello <%= n %>
                             </a>
 
-                            <ul class="dropdown-menu bg-warning">
+                            <ul class="dropdown-menu  text-center ">
 
-                                <li class="nav-item">
-                                    <a class="dropdown-item nav-link" href="/profile">
+                                <li class="nav-item  ">
+                                    <a class="dropdown-item bg-warning nav-link" href="/profile">
                                         Your Profile
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="/logout" class="nav-link dropdown-item">sign out</a>
+                                <li class="nav-item  ">
+                                    <a href="/logout" class="bg-warning nav-link dropdown-item">Sign out</a>
                                 </li>
 
                             </ul>
-                        </li>
 
-                        <div class="ms-1 circle ">
-                            <img src="<%= profile.url %>" alt="">
-                        </div>
+                        </li>
                         
                     </ul>
-                </div>
+                    <div class="ms-3  circle  webimg">
+                        <img src="<%= profile.url %>" alt="">
+                    </div>
+
+                </div>                
+
             </div>
         </nav>
 
@@ -99,15 +108,6 @@
                     <video autoplay muted loop src="image/itmvid.mp4"></video>
 
                 </div>
-                <!-- 
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img  style="height: 90vh;"  src="https://content3.jdmagicbox.com/comp/gwalior/y5/9999px751.x751.140507190034.a4y5/catalogue/itm-university-sithouli-gwalior-institutes-for-b-tech-engineering-kgihaz4qma.jpg" class="w-100">
-                    
-                </div> -->
-
-                <!-- <div class="carousel-item bigimg" data-bs-interval="2000">
-                    <img src="image/convoca.jpg" style="height: 98vh;" class="w-100">
-                </div> -->
 
                 <div class="carousel-item " data-bs-interval="2000">
                     <img src="image/smallimg.jpg" class="w-100">
@@ -131,7 +131,9 @@
         <!-- slider div end -->
 
 
-        <button id="#contactITM" class=" enquiry mb-5 text-dark text-bold btn btn-25 text-center bg-warning fixed-bottom border border-rounded mb-1">Enquire Now </button>
+        <button id="#contactITM"
+            class=" enquiry mb-5 text-dark text-bold btn btn-25 text-center bg-warning fixed-bottom border border-rounded mb-1">Enquire
+            Now </button>
 
 
     </header>

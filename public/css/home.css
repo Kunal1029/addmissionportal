@@ -58,13 +58,15 @@
 }
 
 .navbar ul li a {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 2px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500    ;
     color: rgb(28, 27, 25);
 }
-
+/* .navbar ul li{
+    margin-right: 5px;
+} */
 .ss {
     background-color: #dc3545;
 }
@@ -128,9 +130,10 @@ video {
 .whyitm h1{
     font-size: 3em;
     letter-spacing: 2px;
+    /* color: #ffc400; */
     /* border-bottom: rgb(238, 149, 39) solid 2px; */
     /* display: inline; */
-    text-decoration: underline solid 2px red;
+    /* text-decoration: underline solid 2px red; */
 }
 .whyitm p{
     font-size: 2.5rem;
@@ -176,13 +179,15 @@ label {
 }
 
 .h22 {
+    
     font-size: 3rem;
     font-weight: 400;
     font-weight:500;
     letter-spacing: 2px;
     /* color: #bcffca; */
+    /* color: #fff; */
     color: #fff;
-    text-decoration: underline solid 2px  red;
+    /* text-decoration: underline solid 2px  red; */
 
 }
 
@@ -315,7 +320,7 @@ label {
     letter-spacing: 1px;
     font-size: 3rem;
     /* font-weight: lighter; */
-    text-decoration: underline solid 2px red;
+    /* text-decoration: underline solid 2px red; */
 
 }
 
@@ -380,7 +385,7 @@ label {
    font-size: 3rem;
    margin-left: 6%;
    margin-bottom: 2%;
-   text-decoration: underline solid 2px rgb(238, 149, 39);
+   /* text-decoration: underline solid 1px red; */
 
 }
 .j{
@@ -491,7 +496,7 @@ footer{
         width: 100%;
     }
     .navbar ul li a {
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         letter-spacing: 1px;
         font-size: 0.9rem;
     }
@@ -511,7 +516,7 @@ footer{
     
     }
     .navbar ul li a {
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         letter-spacing: 0px;
         font-size: 0.8rem;
     }
@@ -528,8 +533,36 @@ footer{
      }
      
 }
-
+@media (max-width:810px) {
+    .navbar ul li a {
+        /* text-transform: uppercase; */
+        letter-spacing: 0px;
+        font-size: 0.7rem;
+    }
+    
+}
 @media (max-width:767px) {
+    .circle-web {
+        width: 35px;
+        /* Adjust the width and height as needed for your design */
+        height: 35px;
+        border-radius: 50%;
+        /* Makes the div a circle */
+        overflow: hidden;
+        display: block;
+        /* Hides the overflow of the rectangular image */
+        position: relative;
+        /* Allows positioning of the image within the div */
+    }
+    
+    .circle-web img {
+        width: 100%;
+        /* Makes the image fill the circle div */
+        height: auto;
+        /* Maintains the aspect ratio of the image */
+        display: block;
+        /* Removes any default inline spacing */
+    }
     
     .navbar {
         background-color: rgb(142, 203, 227);
@@ -670,6 +703,7 @@ footer{
     .othercourse button{
         margin-top: 1px;
      }
+    
 }
 @media (max-width:450px){
     .whyitm h6{
@@ -764,6 +798,27 @@ footer{
     /* Removes any default inline spacing */
 }
 
+.circle-web {
+    width: 35px;
+    /* Adjust the width and height as needed for your design */
+    height: 35px;
+    border-radius: 50%;
+    /* Makes the div a circle */
+    overflow: hidden;
+    /* display: none; */
+    /* Hides the overflow of the rectangular image */
+    position: relative;
+    /* Allows positioning of the image within the div */
+}
+
+.circle-web img {
+    width: 100%;
+    /* Makes the image fill the circle div */
+    height: auto;
+    /* Maintains the aspect ratio of the image */
+    display: block;
+    /* Removes any default inline spacing */
+}
 
 
 /* profile page css end*/
