@@ -34,11 +34,16 @@
                     <img src="/image/mobile.png" alt="" class="ms-5 mobimg">
                 </a>
 
-                <button class="navbar-toggler btn btn-border border-0  " data-bs-target="#mob_bar" data-bs-toggle="collapse">      
+
+                <button class="navbar-toggler btn btn-border border-0  " data-bs-target="#mob_bar"
+                    data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon ">
                         <div class="circle-web ">
-                            <img src="<%= profile.url %>" alt="" class="border border-danger">
+                            <img src="<%= profile.url %>" alt="" class="">
                         </div>
+                    </span>
                 </button>
+
 
                 <div class="navbar-collapse collapse" id="mob_bar">
 
@@ -51,14 +56,14 @@
                         <li class="nav-item ms-2"><a href="#about1" class="nav-link">About</a></li>
                         <li class="nav-item ms-2"><a href="#international" class="nav-link">Testimonials</a></li>
                         <li class="nav-item ms-2"><a href="#contactITM" class="nav-link">Contact us</a></li>
-                   
+
                     </ul>
                     <ul class="nav navbar-nav ms-auto ">
 
                         <li class="nav-item dropdown rounded ">
 
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Hello <%= n %>
                             </a>
 
@@ -77,13 +82,13 @@
                             </ul>
 
                         </li>
-                        
+
                     </ul>
                     <div class="ms-3  circle  webimg">
                         <img src="<%= profile.url %>" alt="">
                     </div>
 
-                </div>                
+                </div>
 
             </div>
         </nav>

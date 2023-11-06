@@ -801,7 +801,7 @@ footer{
 .circle-web {
     width: 45px;
     /* Adjust the width and height as needed for your design */
-    height: 35px;
+    height: 45px;
     border-radius: 50%;
     /* Makes the div a circle */
     overflow: hidden;
